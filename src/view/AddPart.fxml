@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="388.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPart">
+   <children>
+      <Label layoutX="53.0" layoutY="62.0" text="ADD PART">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="164.0" layoutY="62.0" mnemonicParsing="false" onAction="#onInHouseRadio" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="Parts" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="251.0" layoutY="62.0" mnemonicParsing="false" onAction="#onOutsourcedRadio" text="Outsourced" toggleGroup="$Parts" />
+      <Label layoutX="49.0" layoutY="108.0" text="ID" />
+      <Label layoutX="48.0" layoutY="143.0" text="Name" />
+      <Label layoutX="48.0" layoutY="178.0" text="Inventory" />
+      <Label layoutX="48.0" layoutY="213.0" text="Cost" />
+      <Label layoutX="49.0" layoutY="249.0" text="Max" />
+      <Label fx:id="machineIDCompanyLabel" layoutX="50.0" layoutY="285.0" text="Machine ID" />
+      <Label layoutX="288.0" layoutY="249.0" text="Min" />
+      <TextField disable="true" editable="false" layoutX="147.0" layoutY="104.0" prefHeight="25.0" prefWidth="129.0" promptText="Auto-Generated ID" />
+      <TextField fx:id="nameTF" layoutX="147.0" layoutY="139.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="stockTF" layoutX="147.0" layoutY="174.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="priceTF" layoutX="147.0" layoutY="209.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="maxTF" layoutX="147.0" layoutY="245.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="machineIDCompanyNameTF" layoutX="147.0" layoutY="281.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="minTF" layoutX="319.0" layoutY="245.0" prefHeight="25.0" prefWidth="129.0" />
+      <Button fx:id="saveButton" layoutX="325.0" layoutY="327.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+      <Button fx:id="cancelButton" layoutX="376.0" layoutY="327.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+   </children>
+</AnchorPane>
